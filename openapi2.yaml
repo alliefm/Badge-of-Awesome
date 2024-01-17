@@ -8,18 +8,20 @@ info:
 host: "io.adafruit.com"
 basePath: "/api/v2/alliefm/feeds"
 tags:
-- name: "verizonbadge.badge3mode/data"
+- name: "verizonbadge.badge1mode/data"
   description: "Change display mode"
-- name: "verizonbadge.badge3color/data"
+- name: "verizonbadge.badge1color/data"
   description: "Change display color"
+- name: "verizonbadge.badge1text/data"
+  description: "Change display text"
 schemes:
 - "https"
 
 paths:
-  /verizonbadge.badge3mode/data:
+  /verizonbadge.badge1mode/data:
     post:
       tags:
-      - "verizonbadge.badge3mode/data"
+      - "verizonbadge.badge1mode/data"
       summary: "Change display mode. Mode 1: Scrolling Text.   Mode 2: Flashing panel.  Mode 3: Verizon Logo.   Mode 4: Color wipe.   Mode 5: Rainbow panel."
       description: ""
       operationId: "value"
@@ -40,10 +42,10 @@ paths:
       security:
       - api_key: []
 
-  /verizonbadge.badge3color/data:
+  /verizonbadge.badge1color/data:
     post:
       tags:
-      - "verizonbadge.badge3color/data"
+      - "verizonbadge.badge1color/data"
       summary: "Change display color. Valid values are hex color values from #000000 to #FFFFFF."
       description: ""
       operationId: "value"
@@ -64,10 +66,10 @@ paths:
       security:
       - api_key: []
 
-  /verizonbadge.badge3text/data:
+  /verizonbadge.badge1text/data:
     post:
       tags:
-      - "verizonbadge.badge3text/data"
+      - "verizonbadge.badge1text/data"
       summary: "Change display text"
       description: ""
       operationId: "value"
