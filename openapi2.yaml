@@ -1,0 +1,128 @@
+swagger: "2.0"
+info:
+  description: "API to change display mode for Verizon API First Badge of Awesome"
+  version: "1.0.0"
+  title: "API First Badge of Awesome"
+  contact:
+    email: "alicia@aliciapaterson.com"
+host: "io.adafruit.com"
+basePath: "/api/v2/alliefm/feeds"
+tags:
+- name: "verizonbadge.badge3mode/data"
+  description: "Change display mode"
+- name: "verizonbadge.badge3color/data"
+  description: "Change display color"
+schemes:
+- "https"
+
+paths:
+  /verizonbadge.badge3mode/data:
+    post:
+      tags:
+      - "verizonbadge.badge3mode/data"
+      summary: "Change display mode. Mode 1: Scrolling Text.   Mode 2: Flashing panel.  Mode 3: Verizon Logo.   Mode 4: Color wipe.   Mode 5: Rainbow panel."
+      description: ""
+      operationId: "value"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Display mode to set on Badge of Awesome"
+        required: true
+        schema:
+          $ref: "#/definitions/data"
+      responses:
+        "405":
+          description: "Invalid input"
+      security:
+      - api_key: []
+
+  /verizonbadge.badge3color/data:
+    post:
+      tags:
+      - "verizonbadge.badge3color/data"
+      summary: "Change display color. Valid values are hex color values from #000000 to #FFFFFF."
+      description: ""
+      operationId: "value"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Display mode to set on Badge of Awesome"
+        required: true
+        schema:
+          $ref: "#/definitions/colordata"
+      responses:
+        "405":
+          description: "Invalid input"
+      security:
+      - api_key: []
+
+  /verizonbadge.badge3text/data:
+    post:
+      tags:
+      - "verizonbadge.badge3text/data"
+      summary: "Change display text"
+      description: ""
+      operationId: "value"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Change text on Badge of Awesome"
+        required: true
+        schema:
+          $ref: "#/definitions/textdata"
+      responses:
+        "405":
+          description: "Invalid input"
+      security:
+      - api_key: []
+
+securityDefinitions:
+  api_key:
+    type: "apiKey"
+    name: "x-aio-key"
+    value: "ba72b58bb8ef4eada1ec5cc7dc3bc95f"
+    in: "header"
+definitions:
+  data:
+    type: "object"
+    properties:
+      value:
+        type: "integer"
+        format: "int64"
+
+  colordata:
+    type: "object"
+    properties:
+      value:
+        type: "string"
+        format: "hex color code"
+
+  textdata:
+    type: "object"
+    properties:
+      value:
+        type: "string"
+        format: "string"
+
+  ApiResponse:
+    type: "object"
+    properties:
+      code:
+        type: "integer"
+        format: "int32"
+      type:
+        type: "string"
+      message:
+        type: "string"
