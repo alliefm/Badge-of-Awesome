@@ -1,10 +1,3 @@
-/************************ Adafruit IO Config *******************************/
-
-// visit io.adafruit.com if you need to create an account,
-// or if you need your Adafruit IO key.
-#define IO_USERNAME  "alliefm"
-#define IO_KEY       "ba72b58bb8ef4eada1ec5cc7dc3bc95f"
-
 /******************************* WIFI **************************************/
 
 // the AdafruitIO_WiFi client will work with the following boards:
@@ -21,7 +14,7 @@
 //   - Adafruit AirLift FeatherWing -> https://www.adafruit.com/product/4264
 
 #define WIFI_SSID "allienet"
-#define WIFI_PASS "Fish4242"
+#define WIFI_PASS "wifi1234"
 
 // uncomment the following line if you are using airlift
 // #define USE_AIRLIFT
@@ -70,3 +63,11 @@ AdafruitIO_WiFi io(IO_USERNAME, IO_KEY, WIFI_SSID, WIFI_PASS);
 // and comment out the AdafruitIO_WiFi client in the WIFI section
 // #include "AdafruitIO_Ethernet.h"
 // AdafruitIO_Ethernet io(IO_USERNAME, IO_KEY);
+
+
+/************************ Adafruit IO Config *******************************/
+
+// visit io.adafruit.com if you need to create an account,
+// or if you need your Adafruit IO key.
+#define IO_USERNAME  "alliefm"
+#define IO_KEY       "ba72b58bb8ef4eada1ec5cc7dc3bc95f"
