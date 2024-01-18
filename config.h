@@ -1,4 +1,4 @@
-/******************************* WIFI **************************************/
+ork/******************************* WIFI **************************************/
 
 // the AdafruitIO_WiFi client will work with the following boards:
 //   - HUZZAH ESP8266 Breakout -> https://www.adafruit.com/products/2471
@@ -13,8 +13,8 @@
 //   - Adafruit AirLift Shield -> https://www.adafruit.com/product/4285
 //   - Adafruit AirLift FeatherWing -> https://www.adafruit.com/product/4264
 
-#define WIFI_SSID "allienet"
-#define WIFI_PASS "wifi1234"
+#define WIFI_SSID "wifi_name"
+#define WIFI_PASS "wifi_password"
 
 // uncomment the following line if you are using airlift
 // #define USE_AIRLIFT
