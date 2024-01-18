@@ -1,5 +1,5 @@
 // Code for Verizon Badge of Awesome: connected, API-driven LED badges built around WeMos ESP821166 module and WS2812b NeoPixel Matrix tiles
-//This is terrible code and a suitably motivated infividual could adapt it by removing reliance on Adafruit IO and 
+//This is terrible code and a suitably motivated individual could adapt it by removing reliance on Adafruit IO and 
 // removing the RGB struct (or updating to use the RGB struct exclusively)
 //
 /************************** Configuration ***********************************/
